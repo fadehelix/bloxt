@@ -1,0 +1,11 @@
+.block {
+  width: 200px;
+  border: 1px solid white;
+  margin-bottom: 12px;
+  padding: 8px;
+  width: 550px;
+
+  &:hover {
+    border: 1px solid #666;
+  }
+}
