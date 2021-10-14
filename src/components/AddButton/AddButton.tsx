@@ -7,7 +7,11 @@ function AddButton() {
   const createBlock = useStoreActions((actions) => actions.createBlock);
   const clickHandler = () => {
     const id = uuid();
-    createBlock({ id, content: `Yet another block with id ${id}` });
+    createBlock({
+      id,
+      title: `Yet another block with id ${id}`,
+      content: 'Exaple content',
+    });
   };
   return (
     <button

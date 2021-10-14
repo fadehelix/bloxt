@@ -6,6 +6,7 @@ import {
   DropResult,
 } from 'react-beautiful-dnd';
 import { useStoreActions, useStoreState } from '../../hooks/store.hooks';
+import { Block } from '../index';
 import BlockType from '../../data/block.model';
 import style from './Editor.module.scss';
 
@@ -25,12 +26,12 @@ function DraggableBlock({ block, index }: DraggableBlockType) {
     <Draggable draggableId={block.id} index={index}>
       {(provided) => (
         <div
-          className={style.block}
+          className={style.draggableBlock}
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
         >
-          {block.content}
+          <Block title={block.title} content={block.content} />
         </div>
       )}
     </Draggable>
