@@ -1,13 +1,13 @@
 import React from 'react';
 import style from './App.module.scss';
-import { AppHeader, Editor, Notes } from './components';
+import { AppHeader, Board, Notes } from './components';
 
 function App() {
   return (
     <div className={style.root}>
       <AppHeader />
       <main className={style.main}>
-        <Editor />
+        <Board />
         <aside className={style.sidebar}>
           <Notes />
         </aside>

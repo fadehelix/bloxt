@@ -8,7 +8,7 @@ import {
 import { useStoreActions, useStoreState } from '../../hooks/store.hooks';
 import { Block } from '../index';
 import BlockType from '../../data/block.model';
-import style from './Editor.module.scss';
+import style from './Board.module.scss';
 
 type DraggableBlockType = { block: BlockType; index: number };
 type BlockListProps = { blocks: BlockType[] };
@@ -48,7 +48,7 @@ const BlockList: React.FC<BlockListProps> = ({ blocks }) => {
   );
 };
 
-function Editor() {
+function Board() {
   const blocks = useStoreState((state) => state.blocks);
   const reorderBlocks = useStoreActions((actions) => actions.reorderBlocks);
 
@@ -84,4 +84,4 @@ function Editor() {
   );
 }
 
-export default Editor;
+export default Board;
