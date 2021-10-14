@@ -31,7 +31,7 @@ function DraggableBlock({ block, index }: DraggableBlockType) {
           {...provided.draggableProps}
           {...provided.dragHandleProps}
         >
-          <Block title={block.title} content={block.content} />
+          <Block data={block} />
         </div>
       )}
     </Draggable>

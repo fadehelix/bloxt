@@ -1,12 +1,5 @@
 $editor-block-width: 800px;
 .draggableBlock {
-  width: 200px;
-  border: 1px solid white;
   margin-bottom: 12px;
-  padding: 8px;
   width: $editor-block-width;
-
-  &:hover {
-    border: 1px solid #666;
-  }
 }

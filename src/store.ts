@@ -16,6 +16,16 @@ const store = createStore<StoreModel>({
   reorderBlocks: action((state, payload) => {
     state.blocks = payload;
   }),
+  editBlock: action((state, payload) => {
+    const blockId = payload.id;
+    state.blocks.forEach((block) => {
+      if (block.id === blockId) {
+        console.log('block? ', block.id, payload.content);
+        block.title = payload.title;
+        block.content = payload.content;
+      }
+    });
+  }),
 });
 
 export { store };
