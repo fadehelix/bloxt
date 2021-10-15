@@ -43,7 +43,7 @@ function Editor<T>({ initialValue, handleValue }: EditorProps<T>) {
 
   useEffect(() => {
     handleValue(value);
-  }, [value]);
+  }, [value, handleValue]);
 
   const handleOnChange = (value: any) => {
     setValue(value);

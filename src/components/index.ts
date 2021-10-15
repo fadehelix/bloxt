@@ -5,3 +5,6 @@ export { default as Notes } from './Notes/Notes';
 export { default as Block } from './Block/Block';
 export { default as Editor } from './Editor/Editor';
 export { default as HtmlPreview } from './HtmlPreview/HtmlPreview';
+export { default as Trash } from './Trash/Trash';
+export { default as DraggableBlock } from './Board/DraggableBlock';
+export { default as BlockList } from './Board/BlockList';

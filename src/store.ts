@@ -5,7 +5,7 @@ import StoreModel from './data/store.model';
 const initialBlocks = Array.from({ length: 3 }, (v, k) => k).map((k) => ({
   id: uuid(),
   title: `Initial block  ${k}`,
-  content: 'Example initial content',
+  content: `<p>Initial content ${k}</p>`,
 }));
 
 const store = createStore<StoreModel>({
