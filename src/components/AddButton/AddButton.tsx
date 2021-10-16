@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStoreActions } from '../../hooks/store.hooks';
 import { v4 as uuid } from 'uuid';
+import { randomSentence } from '../../utils/fakeData';
 import style from './AddButton.module.scss';
 
 function AddButton() {
@@ -9,8 +10,8 @@ function AddButton() {
     const id = uuid();
     createBlock({
       id,
-      title: `Yet another block with id ${id}`,
-      content: 'Exaple content',
+      title: `Optional description for this block`,
+      content: randomSentence(),
     });
   };
   return (

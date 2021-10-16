@@ -8,9 +8,9 @@ Write text in independent blocks and arrange them as your article grows.
 - [x] Reorder text blocks
 ### Iteration 2
 - [x] Edit title and content of text block 
-- [ ] Remove text block from editor by dragging it into trash
+- [x] Remove text block from editor by dragging it into trash
 ### Iteration 3
-- [ ] Move text block between Editor and Notes
+- [x] Move text block between Editor and Notes
 ### Iteration 4
 - [ ] Final text preview
 ### Iteration 5

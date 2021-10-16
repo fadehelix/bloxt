@@ -2,11 +2,12 @@ import { createStore, action } from 'easy-peasy';
 import { v4 as uuid } from 'uuid';
 import StoreModel from './data/store.model';
 import { defaultContainers } from './data';
+import { randomSentence } from './utils/fakeData';
 
 const initialBlocks = Array.from({ length: 3 }, (v, k) => k).map((k) => ({
   id: uuid(),
-  title: `Initial block  ${k}`,
-  content: `<p>Initial content ${k}</p>`,
+  title: 'Optional description for this block',
+  content: `<p>${randomSentence()} ${k}</p>`,
 }));
 
 const initialContainers = [
@@ -35,6 +36,9 @@ const store = createStore<StoreModel>({
         block.content = payload.content;
       }
     });
+  }),
+  emptyContainer: action((state, payload) => {
+    state.blocks[payload].length = 0;
   }),
   containers: initialContainers,
 });

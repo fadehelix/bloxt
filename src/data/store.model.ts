@@ -8,6 +8,7 @@ type StoreModel = {
   createBlock: Action<StoreModel, Block>;
   reorderBlocks: Action<StoreModel, reorderBlocksPayload>;
   editBlock: Action<StoreModel, Block>;
+  emptyContainer: Action<StoreModel, string>;
   containers: string[];
 };
 
