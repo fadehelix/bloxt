@@ -1,7 +1,7 @@
-type Block = {
+type BlockType = {
   id: string;
   title?: string;
   content: string;
 };
 
-export default Block;
+export default BlockType;

@@ -1,13 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import * as ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import { EditorProps } from './types';
 
-interface EditorProps<T> {
-  initialValue: T;
-  handleValue: (value: T) => void;
-}
-
-function Editor<T>({ initialValue, handleValue }: EditorProps<T>) {
+function RichTextEditor<T>({ initialValue, handleValue }: EditorProps<T>) {
   const [value, setValue] = useState(initialValue);
   const quill = useRef(null);
   const modules = {
@@ -61,4 +57,4 @@ function Editor<T>({ initialValue, handleValue }: EditorProps<T>) {
   );
 }
 
-export default Editor;
+export default RichTextEditor;

@@ -1,0 +1,8 @@
+.actionIcon {
+  position: absolute;
+  right: 5px;
+  visibility: hidden;
+}
+:global(.block--active) .actionIcon {
+  visibility: visible;
+}

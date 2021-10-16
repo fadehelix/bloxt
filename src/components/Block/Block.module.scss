@@ -20,20 +20,19 @@ $bg-color: white;
 
   top: 0;
   left: 0;
-
-  .active & {
-    display: block;
-  }
 }
+:global(.block--active) .blockTitle {
+  display: block;
+}
+
 .blockContent {
   position: relative;
 }
-.actionIcon {
-  position: absolute;
-  right: 5px;
-  visibility: hidden;
-
-  .active & {
-    visibility: visible;
-  }
-}
+// .actionIcon {
+//   position: absolute;
+//   right: 5px;
+//   visibility: hidden;
+// }
+// :global(.block--active) .actionIcon {
+//   visibility: visible;
+// }

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import classnames from 'classnames';
-import { Editor, HtmlPreview } from '../index';
+import { RichTextEditor, PureTextEditor } from '../index';
 import { useStoreActions } from '../../hooks/store.hooks';
 import BlockType from '../../data/block.model';
-import ToggleEditBtn from './ToggleEditBtn/ToggleEditBtn';
+import TextComponent from './Text';
 
 import style from './Block.module.scss';
 
@@ -12,64 +12,53 @@ type BlockProps = {
 };
 
 function Block({ data }: BlockProps) {
-  const { id, title, content } = data;
-  const [titleEditMode, setTitleEditMode] = useState(false);
-  const [titleValue, setTitleValue] = useState(title);
-  const [contentEditMode, setContentEditMode] = useState(false);
-  const [contentValue, setContentValue] = useState(content);
+  const { title, content } = data;
   const [isActive, setIsActive] = useState(false);
   const editBlock = useStoreActions((actions) => actions.editBlock);
 
+  const handleSaveText = (fieldId: string, value: string) => {
+    editBlock({ ...data, [fieldId]: value });
+  };
+
   return (
-    //TODO: encapsulate logic for toggling Editor
     <section
-      className={classnames(style.root, { [style.active]: isActive })}
+      className={classnames(style.root, { 'block--active': isActive })}
       onMouseEnter={() => setIsActive(true)}
       onMouseLeave={() => setIsActive(false)}
     >
-      {
+      {/* {
         <div className={style.blockTitle}>
-          <div className={style.actionIcon}>
-            <ToggleEditBtn
-              editMode={titleEditMode}
-              clickHandler={() => {
-                setTitleEditMode(!titleEditMode);
-                editBlock({ id, title: titleValue, content: contentValue });
-              }}
-            />
-          </div>
-          {titleEditMode ? (
-            <input
-              type="text"
-              onChange={(event) => setTitleValue(event.currentTarget.value)}
-              value={titleValue}
-            />
-          ) : (
-            titleValue
-          )}
+          <TextComponent
+            fieldId="title"
+            initialValue={title}
+            saveHandler={handleSaveText}
+            component={(initialValue, handleValue) => {
+              return (
+                <PureTextEditor
+                  initialValue={initialValue}
+                  // @ts-ignore
+                  handleValue={handleValue}
+                />
+              );
+            }}
+          />
         </div>
-      }
+      } */}
       <div className={style.blockContent}>
-        <div className={style.actionIcon}>
-          <ToggleEditBtn
-            editMode={contentEditMode}
-            clickHandler={() => {
-              setContentEditMode(!contentEditMode);
-              editBlock({ id, title: titleValue, content: contentValue });
-            }}
-          />
-        </div>
-        {contentEditMode ? (
-          <Editor
-            initialValue={contentValue}
-            handleValue={(value) => {
-              setContentValue(value);
-            }}
-          />
-        ) : (
-          // @ts-ignore
-          <HtmlPreview value={contentValue} />
-        )}
+        <TextComponent
+          fieldId="content"
+          initialValue={content}
+          saveHandler={handleSaveText}
+          component={(initialValue, handleValue) => {
+            return (
+              <RichTextEditor
+                initialValue={initialValue}
+                // @ts-ignore
+                handleValue={handleValue}
+              />
+            );
+          }}
+        />
       </div>
     </section>
   );
