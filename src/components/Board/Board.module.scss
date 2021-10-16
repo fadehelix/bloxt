@@ -1,1 +1,7 @@
-
+$bg-color: #fff;
+.root {
+  background-color: $bg-color;
+  border: 2px dashed darke($bg-color, 10%);
+  border-radius: 4px;
+  min-width: 600px;
+}

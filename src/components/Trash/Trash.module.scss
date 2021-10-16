@@ -1,13 +1,16 @@
+$bg-color: rgb(255, 172, 172);
 .root {
   align-items: center;
-  background: rgb(247, 120, 120);
+  background: $bg-color;
   background-image: url('./trash_icon.svg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 60%;
+  background-size: 40%;
+  border-radius: 4px;
+  border: 2px dashed darken($bg-color, 10%);
   display: flex;
   flex-flow: column nowrap;
-  height: 40%;
+  height: 36%;
   justify-content: flex-start;
   width: 100%;
 

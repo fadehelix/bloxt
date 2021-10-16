@@ -2,10 +2,11 @@ $sidebar-width: 300px;
 .root {
   box-sizing: border-box;
   height: 100vh;
-  margin: 0;
+  margin: 0 auto;
   overflow: hidden;
   padding: 0;
-  width: 100vw;
+  max-width: 1200px;
+  min-width: 1140px;
 }
 .main {
   box-sizing: border-box;
@@ -14,14 +15,10 @@ $sidebar-width: 300px;
   justify-content: space-between;
   padding: 15px;
   width: 100%;
-
-  & > div {
-    background-color: rgb(220, 248, 165);
-  }
 }
 .sidebar {
-  border-left: 2px solid rgb(100, 100, 100);
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-between;
   width: $sidebar-width;
 }

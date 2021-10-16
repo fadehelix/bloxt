@@ -17,7 +17,7 @@ function Notes() {
           {...provided.droppableProps}
           className={style.root}
         >
-          <h3 className={style.title}>Notes</h3>
+          <h3 className={style.title}>Keep for later use</h3>
           <BlockList blocks={blocks} />
           {provided.placeholder}
         </div>
