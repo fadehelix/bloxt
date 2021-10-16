@@ -1,27 +1,29 @@
 {
   "files": {
-    "main.css": "/bloxt/static/css/main.bd0cf590.chunk.css",
-    "main.js": "/bloxt/static/js/main.05707b9e.chunk.js",
-    "main.js.map": "/bloxt/static/js/main.05707b9e.chunk.js.map",
-    "runtime-main.js": "/bloxt/static/js/runtime-main.9158b5ac.js",
-    "runtime-main.js.map": "/bloxt/static/js/runtime-main.9158b5ac.js.map",
+    "main.css": "/bloxt/static/css/main.a11729a6.chunk.css",
+    "main.js": "/bloxt/static/js/main.9656add9.chunk.js",
+    "main.js.map": "/bloxt/static/js/main.9656add9.chunk.js.map",
+    "runtime-main.js": "/bloxt/static/js/runtime-main.500cf07f.js",
+    "runtime-main.js.map": "/bloxt/static/js/runtime-main.500cf07f.js.map",
     "static/css/2.f83b9687.chunk.css": "/bloxt/static/css/2.f83b9687.chunk.css",
-    "static/js/2.47e78305.chunk.js": "/bloxt/static/js/2.47e78305.chunk.js",
-    "static/js/2.47e78305.chunk.js.map": "/bloxt/static/js/2.47e78305.chunk.js.map",
-    "static/js/3.2df80a14.chunk.js": "/bloxt/static/js/3.2df80a14.chunk.js",
-    "static/js/3.2df80a14.chunk.js.map": "/bloxt/static/js/3.2df80a14.chunk.js.map",
+    "static/js/2.e22ba6d2.chunk.js": "/bloxt/static/js/2.e22ba6d2.chunk.js",
+    "static/js/2.e22ba6d2.chunk.js.map": "/bloxt/static/js/2.e22ba6d2.chunk.js.map",
+    "static/js/3.269e4892.chunk.js": "/bloxt/static/js/3.269e4892.chunk.js",
+    "static/js/3.269e4892.chunk.js.map": "/bloxt/static/js/3.269e4892.chunk.js.map",
     "index.html": "/bloxt/index.html",
     "static/css/2.f83b9687.chunk.css.map": "/bloxt/static/css/2.f83b9687.chunk.css.map",
-    "static/css/main.bd0cf590.chunk.css.map": "/bloxt/static/css/main.bd0cf590.chunk.css.map",
-    "static/js/2.47e78305.chunk.js.LICENSE.txt": "/bloxt/static/js/2.47e78305.chunk.js.LICENSE.txt",
+    "static/css/main.a11729a6.chunk.css.map": "/bloxt/static/css/main.a11729a6.chunk.css.map",
+    "static/js/2.e22ba6d2.chunk.js.LICENSE.txt": "/bloxt/static/js/2.e22ba6d2.chunk.js.LICENSE.txt",
     "static/media/edit-icon.2c7e8a8f.svg": "/bloxt/static/media/edit-icon.2c7e8a8f.svg",
-    "static/media/save-icon.a08047b0.svg": "/bloxt/static/media/save-icon.a08047b0.svg"
+    "static/media/Notes.module.scss": "/bloxt/static/media/notes_icon.0144cee1.svg",
+    "static/media/save-icon.a08047b0.svg": "/bloxt/static/media/save-icon.a08047b0.svg",
+    "static/media/Trash.module.scss": "/bloxt/static/media/trash_icon.dec8e820.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9158b5ac.js",
+    "static/js/runtime-main.500cf07f.js",
     "static/css/2.f83b9687.chunk.css",
-    "static/js/2.47e78305.chunk.js",
-    "static/css/main.bd0cf590.chunk.css",
-    "static/js/main.05707b9e.chunk.js"
+    "static/js/2.e22ba6d2.chunk.js",
+    "static/css/main.a11729a6.chunk.css",
+    "static/js/main.9656add9.chunk.js"
   ]
 }
