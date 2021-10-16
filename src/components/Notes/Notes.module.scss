@@ -1,13 +1,10 @@
 .root {
+  background-color: rgb(180, 231, 255);
+  height: 60%;
+
   align-items: center;
-  background: rgb(247, 120, 120);
-  background-image: url('./trash_icon.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 60%;
   display: flex;
   flex-flow: column nowrap;
-  height: 40%;
   justify-content: flex-start;
   width: 100%;
 
@@ -18,6 +15,5 @@
 }
 
 .title {
-  color: white;
   text-align: center;
 }

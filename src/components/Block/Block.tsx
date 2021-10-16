@@ -54,7 +54,6 @@ function Block({ data }: BlockProps) {
           <ToggleEditBtn
             editMode={contentEditMode}
             clickHandler={() => {
-              console.log('contentValue? ', contentValue);
               setContentEditMode(!contentEditMode);
               editBlock({ id, title: titleValue, content: contentValue });
             }}
@@ -64,7 +63,6 @@ function Block({ data }: BlockProps) {
           <Editor
             initialValue={contentValue}
             handleValue={(value) => {
-              console.log('handle content value? ', value);
               setContentValue(value);
             }}
           />
