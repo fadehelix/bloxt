@@ -12,6 +12,7 @@ Write text in independent blocks and arrange them as your article grows.
 ### Iteration 3
 - [x] Move text block between Editor and Notes
 ### Iteration 4
+- [ ] App layout 
 - [ ] Final text preview
 ### Iteration 5
 - [ ] Add some animations to: block is active/inactive, display/hide block actions, add new block (transition in)
