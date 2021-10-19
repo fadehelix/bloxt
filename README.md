@@ -16,14 +16,19 @@ Write text in independent blocks and arrange them as your article grows.
 - [ ] Final text preview
 ### Iteration 5
 - [ ] Add some animations to: block is active/inactive, display/hide block actions, add new block (transition in)
+### Iteration 6
 - [ ] Persist content at least in local/session storage
+- [ ] Create new Article
+- [ ] Choose and edit existing Article 
 ## Names and terms
 ### Board
 Main area when the Author writes text
-
 ### Notes
 Sub area to put blocks which the Author don't want to include in the Result
-
+### Article
+Container for persisted blocks. Author can create, edit and delete Articles
+### Author
+Person (actor) who creates/edits Articles/Articles
 ## Challenges
 ### [done] easy-peasy how to type actions?
 Create typed hooks: https://easy-peasy.vercel.app/docs/typescript-api/create-typed-hooks.html
