@@ -17,7 +17,7 @@ function Text({ fieldId, initialValue = '', component, saveHandler }: Props) {
   const [editMode, setEditMode] = useState(false);
   const [value, setValue] = useState(initialValue);
   return (
-    <>
+    <div onDoubleClick={() => setEditMode(true)}>
       <div className={style.actionIcon}>
         <ToggleEditBtn
           editMode={editMode}
@@ -35,7 +35,7 @@ function Text({ fieldId, initialValue = '', component, saveHandler }: Props) {
       ) : (
         <HtmlPreview value={value} />
       )}
-    </>
+    </div>
   );
 }
 
