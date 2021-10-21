@@ -3,6 +3,8 @@ import * as ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { EditorProps } from './types';
 
+import './RichTextEditor.module.scss';
+
 function RichTextEditor<T>({ initialValue, handleValue }: EditorProps<T>) {
   const [value, setValue] = useState(initialValue);
   const quill = useRef(null);
