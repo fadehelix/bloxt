@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import classnames from 'classnames';
-import { RichTextEditor, PureTextEditor } from '../index';
+import { RichTextEditor } from '../index';
 import { useStoreActions } from '../../hooks/store.hooks';
 import BlockType from '../../data/block.model';
 import TextComponent from './Text';
@@ -12,7 +12,7 @@ type BlockProps = {
 };
 
 function Block({ data }: BlockProps) {
-  const { title, content } = data;
+  const { content } = data;
   const [isActive, setIsActive] = useState(false);
   const editBlock = useStoreActions((actions) => actions.editBlock);
 

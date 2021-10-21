@@ -1,9 +1,7 @@
 import React from 'react';
-import AddIcon from '@mui/icons-material/Add';
-
-import { useStoreActions } from '../../hooks/store.hooks';
 import { v4 as uuid } from 'uuid';
-import { randomSentence } from '../../utils/fakeData';
+import AddIcon from '@mui/icons-material/Add';
+import { useStoreActions } from '../../hooks/store.hooks';
 import { Button } from '../Form/index';
 import style from './AddButton.module.scss';
 
@@ -13,8 +11,8 @@ function AddButton() {
     const id = uuid();
     createBlock({
       id,
-      title: `Optional description for this block`,
-      content: randomSentence(),
+      title: `New block`,
+      content: 'New block',
     });
   };
   return (
