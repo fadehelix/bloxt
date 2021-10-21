@@ -1,6 +1,7 @@
 # BloXt Text Editor
 Write text in independent blocks and arrange them as your article grows.
 
+Demo: https://fadehelix.github.io/bloxt/
 
 ## PoC Features (Roadmap)
 ### Iteration 1
@@ -12,14 +13,10 @@ Write text in independent blocks and arrange them as your article grows.
 ### Iteration 3
 - [x] Move text block between Editor and Notes
 ### Iteration 4
-- [ ] App layout 
-- [ ] Final text preview
-### Iteration 5
-- [ ] Add some animations to: block is active/inactive, display/hide block actions, add new block (transition in)
-### Iteration 6
-- [ ] Persist content at least in local/session storage
-- [ ] Create new Article
-- [ ] Choose and edit existing Article 
+- [x] App layout 
+- [x] Final text preview
+
+From this point all features, bugs and ideas are stored as [issues](https://github.com/fadehelix/bloxt/issues)
 ## Names and terms
 ### Board
 Main area when the Author writes text

@@ -1,7 +1,5 @@
-import React from 'react';
+import { Save as SaveIcon, Edit as EditIcon } from '@mui/icons-material';
 import style from './ToggleEditBtn.module.scss';
-import { ReactComponent as EditIcon } from './icons/edit-icon.svg';
-import { ReactComponent as SaveIcon } from './icons/save-icon.svg';
 
 type Props = {
   editMode: boolean;

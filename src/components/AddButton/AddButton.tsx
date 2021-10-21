@@ -17,7 +17,7 @@ function AddButton() {
   };
   return (
     <Button
-      text="Add block"
+      text="Add text block"
       icon={<AddIcon />}
       variant="outlined"
       onClick={clickHandler}
