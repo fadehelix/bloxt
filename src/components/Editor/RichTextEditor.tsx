@@ -20,14 +20,12 @@ function RichTextEditor<T>({ initialValue, handleValue }: EditorProps<T>) {
     'header',
     'bold',
     'italic',
-    'underline',
     'strike',
     'blockquote',
     'list',
     'bullet',
     'indent',
     'link',
-    'image',
   ];
 
   // TODO: TEST for setting focus

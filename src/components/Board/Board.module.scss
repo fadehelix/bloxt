@@ -3,5 +3,9 @@ $bg-color: #fff;
   background-color: $bg-color;
   border: 2px dashed darke($bg-color, 10%);
   border-radius: 4px;
+  height: 100%;
   min-width: 600px;
+}
+.Toolbar {
+  padding: 0.5rem;
 }

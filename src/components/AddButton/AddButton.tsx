@@ -1,7 +1,10 @@
 import React from 'react';
+import AddIcon from '@mui/icons-material/Add';
+
 import { useStoreActions } from '../../hooks/store.hooks';
 import { v4 as uuid } from 'uuid';
 import { randomSentence } from '../../utils/fakeData';
+import { Button } from '../Form/index';
 import style from './AddButton.module.scss';
 
 function AddButton() {
@@ -15,14 +18,14 @@ function AddButton() {
     });
   };
   return (
-    <button
-      type="button"
+    <Button
+      text="Add block"
+      icon={<AddIcon />}
+      variant="outlined"
       onClick={clickHandler}
       className={style.root}
       title="Add new block"
-    >
-      +
-    </button>
+    />
   );
 }
 
