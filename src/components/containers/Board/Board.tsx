@@ -1,8 +1,8 @@
 import { Droppable } from 'react-beautiful-dnd';
-import { useStoreState } from '../../hooks/store.hooks';
-import { BlockList } from '../index';
-import { defaultContainers } from '../../data';
-import { AddButton } from '../index';
+import { useStoreState } from '../../../hooks/store.hooks';
+import { BlockList } from '../../index';
+import { defaultContainers } from '../../../data';
+import { AddButton } from '../../index';
 import style from './Board.module.scss';
 
 function Board() {

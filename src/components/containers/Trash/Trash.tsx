@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { Droppable } from 'react-beautiful-dnd';
-import { useStoreState, useStoreActions } from '../../hooks/store.hooks';
-import { BlockList } from '../index';
-import { defaultContainers } from '../../data';
+import { useStoreState, useStoreActions } from '../../../hooks/store.hooks';
+import { BlockList } from '../../index';
+import { defaultContainers } from '../../../data';
 
 import style from './Trash.module.scss';
 

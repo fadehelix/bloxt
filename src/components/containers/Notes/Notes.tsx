@@ -1,7 +1,7 @@
 import { Droppable } from 'react-beautiful-dnd';
-import { useStoreState } from '../../hooks/store.hooks';
-import { BlockList } from '../index';
-import { defaultContainers } from '../../data';
+import { useStoreState } from '../../../hooks/store.hooks';
+import { BlockList } from '../../index';
+import { defaultContainers } from '../../../data';
 import style from './Notes.module.scss';
 
 const getListStyle = (isDraggingOver: boolean) => ({

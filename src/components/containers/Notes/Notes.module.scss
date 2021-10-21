@@ -15,6 +15,8 @@ $bg-color: rgb(225, 242, 250);
   overflow: hidden auto;
   width: 100%;
 
+  transition: box-shadow 0.3s ease-in-out;
+
   & > div {
     margin: 10px;
     width: 80%;

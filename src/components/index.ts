@@ -1,11 +1,11 @@
 export { default as AppHeader } from './AppHeader/AppHeader';
 export { default as AddButton } from './AddButton/AddButton';
-export { default as Board } from './Board/Board';
-export { default as Notes } from './Notes/Notes';
+export { default as Board } from './containers/Board/Board';
+export { default as Notes } from './containers/Notes/Notes';
 export { default as Block } from './Block/Block';
 export { default as RichTextEditor } from './Editor/RichTextEditor';
 export { default as PureTextEditor } from './Editor/PureTextEditor';
 export { default as HtmlPreview } from './HtmlPreview/HtmlPreview';
-export { default as Trash } from './Trash/Trash';
-export { default as DraggableBlock } from './Board/DraggableBlock';
-export { default as BlockList } from './Board/BlockList';
+export { default as Trash } from './containers/Trash/Trash';
+export { default as DraggableBlock } from './Block/DraggableBlock';
+export { default as BlockList } from './BlockList/BlockList';
