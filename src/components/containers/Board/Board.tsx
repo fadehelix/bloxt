@@ -2,8 +2,10 @@ import { Droppable } from 'react-beautiful-dnd';
 import { useStoreState } from '../../../hooks/store.hooks';
 import { BlockList } from '../../index';
 import { defaultContainers } from '../../../data';
-import { AddButton } from '../../index';
 import style from './Board.module.scss';
+
+import AddBlockInput from '../../AddBlock/AddBlockInput';
+import classnames from 'classnames';
 
 function Board() {
   const blocks = useStoreState(
@@ -16,8 +18,8 @@ function Board() {
 
   return (
     <div>
-      <div className={style.Toolbar}>
-        <AddButton />
+      <div className={classnames(style.Toolbar, 'toolbar')}>
+        <AddBlockInput />
       </div>
       <Droppable droppableId={defaultContainers.board}>
         {(provided, snapshot) => (

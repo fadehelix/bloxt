@@ -1,5 +1,5 @@
 export { default as AppHeader } from './AppHeader/AppHeader';
-export { default as AddButton } from './AddButton/AddButton';
+export { default as AddBlockButton } from './AddBlock/AddBlockButton';
 export { default as Board } from './containers/Board/Board';
 export { default as Notes } from './containers/Notes/Notes';
 export { default as Block } from './Block/Block';

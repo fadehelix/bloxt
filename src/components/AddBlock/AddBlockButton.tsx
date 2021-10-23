@@ -3,28 +3,36 @@ import { v4 as uuid } from 'uuid';
 import AddIcon from '@mui/icons-material/Add';
 import { useStoreActions } from '../../hooks/store.hooks';
 import { Button } from '../Form/index';
-import style from './AddButton.module.scss';
+import style from './AddBlockButton.module.scss';
 
-function AddButton() {
+type Props = {
+  title: string;
+  content: string;
+};
+
+function AddBlockButton({ title, content }: Props) {
   const createBlock = useStoreActions((actions) => actions.createBlock);
   const clickHandler = () => {
+    if (!content) {
+      return;
+    }
     const id = uuid();
     createBlock({
       id,
-      title: `New block`,
-      content: 'New block',
+      title,
+      content,
     });
   };
   return (
     <Button
       text="Add text block"
       icon={<AddIcon />}
-      variant="outlined"
+      variant="contained"
       onClick={clickHandler}
-      className={style.root}
       title="Add new block"
+      className={style.root}
     />
   );
 }
 
-export default AddButton;
+export default AddBlockButton;

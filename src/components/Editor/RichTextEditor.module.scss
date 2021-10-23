@@ -1,6 +1,10 @@
 :global(.quill) {
   height: 350px;
 }
+:global(.toolbar) :global(.quill) {
+  height: auto;
+}
+
 :global(.quill-cointainer) {
   height: 85%;
 }
