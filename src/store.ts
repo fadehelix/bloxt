@@ -18,8 +18,7 @@ const initialContainers = [
   defaultContainers.notes,
   defaultContainers.trash,
 ];
-
-const store = createStore<StoreModel>({
+const model: StoreModel = {
   blocks: {
     [defaultContainers.board]: initialBlocks,
     [defaultContainers.notes]: [],
@@ -48,6 +47,7 @@ const store = createStore<StoreModel>({
   showNotification: action((state, payload) => {
     state.notification = payload;
   }),
-});
+};
+const store = createStore<StoreModel>(model);
 
-export { store };
+export { store, model };
