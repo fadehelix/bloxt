@@ -19,10 +19,14 @@ function Trash() {
     (state) => state.blocks[defaultContainers.trash]
   );
   const emptyTrash = useStoreActions((action) => action.emptyContainer);
+  const notification = useStoreActions((action) => action.showNotification);
 
   useEffect(() => {
-    blocks.length && emptyTrash(defaultContainers.trash);
-  }, [blocks, emptyTrash]);
+    if (!blocks.length) return;
+    console.log('empty!!!');
+    emptyTrash(defaultContainers.trash);
+    notification({ type: 'info', message: 'Blocks has been deleted.' });
+  }, [blocks, emptyTrash, notification]);
 
   return (
     <Droppable droppableId={defaultContainers.trash}>

@@ -21,6 +21,7 @@ function AddBlockButton({ title, content }: Props) {
         type: 'error',
         message: 'Block content cannot be empty',
       });
+      return;
     }
     const id = uuid();
     createBlock({
