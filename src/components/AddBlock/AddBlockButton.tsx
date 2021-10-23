@@ -12,9 +12,15 @@ type Props = {
 
 function AddBlockButton({ title, content }: Props) {
   const createBlock = useStoreActions((actions) => actions.createBlock);
+  const showNotification = useStoreActions(
+    (actions) => actions.showNotification
+  );
   const clickHandler = () => {
     if (!content) {
-      return;
+      showNotification({
+        type: 'error',
+        message: 'Block content cannot be empty',
+      });
     }
     const id = uuid();
     createBlock({

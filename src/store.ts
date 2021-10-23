@@ -44,6 +44,10 @@ const store = createStore<StoreModel>({
     state.blocks[payload].length = 0;
   }),
   containers: initialContainers,
+  notification: null,
+  showNotification: action((state, payload) => {
+    state.notification = payload;
+  }),
 });
 
 export { store };

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React, { useEffect } from 'react';
 import {
   DragDropContext,
   DraggableLocation,
@@ -9,6 +9,7 @@ import { AppHeader, Board, Notes, Trash } from './components';
 import BlockType from './data/block.model';
 import style from './App.module.scss';
 import Block from './data/block.model';
+import Alert from './components/Notification/Notification';
 
 const reorder = (list: BlockType[], startIndex: number, endIndex: number) => {
   const result = Array.from(list);
@@ -43,6 +44,17 @@ const move = (
 function App() {
   const blocks = useStoreState((state) => state.blocks);
   const reorderBlocks = useStoreActions((actions) => actions.reorderBlocks);
+  // const { enqueueSnackbar } = useSnackbar();
+  // const notification = useStoreState((state) => state.notification);
+
+  // useEffect(() => {
+  //   if (!notification) return;
+  //   const { type, message } = notification;
+  //   enqueueSnackbar(message, {
+  //     variant: type,
+  //     autoHideDuration: 5000,
+  //   });
+  // }, [notification, enqueueSnackbar]);
 
   function onDragEnd(result: DropResult) {
     const { source, destination } = result;
@@ -81,6 +93,7 @@ function App() {
           </aside>
         </DragDropContext>
       </main>
+      <Alert />
     </div>
   );
 }
