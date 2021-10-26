@@ -9,12 +9,16 @@ function AddBlockInput() {
     <>
       <div className="AddBlockInput">
         <TextEditor
-          initialValue=""
+          initialValue={value}
           handleValue={(editorValue) => {
             setValue(editorValue);
           }}
         />
-        <AddBlockButton content={value} title="" />
+        <AddBlockButton
+          content={value}
+          title=""
+          clearInputs={() => setValue('')}
+        />
       </div>
     </>
   );

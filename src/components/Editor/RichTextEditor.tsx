@@ -38,11 +38,12 @@ function RichTextEditor<T>({ initialValue, handleValue }: EditorProps<T>) {
   });
 
   useEffect(() => {
-    handleValue(value);
-  }, [value, handleValue]);
+    setValue(initialValue);
+  }, [initialValue]);
 
   const handleOnChange = (value: any) => {
     setValue(value);
+    handleValue(value);
   };
 
   return (

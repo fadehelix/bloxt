@@ -8,9 +8,10 @@ import style from './AddBlockButton.module.scss';
 type Props = {
   title: string;
   content: string;
+  clearInputs: () => void;
 };
 
-function AddBlockButton({ title, content }: Props) {
+function AddBlockButton({ title, content, clearInputs }: Props) {
   const createBlock = useStoreActions((actions) => actions.createBlock);
   const showNotification = useStoreActions(
     (actions) => actions.showNotification
@@ -29,6 +30,7 @@ function AddBlockButton({ title, content }: Props) {
       title,
       content,
     });
+    clearInputs();
   };
   return (
     <Button
