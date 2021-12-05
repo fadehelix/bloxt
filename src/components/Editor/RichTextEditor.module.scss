@@ -11,3 +11,6 @@
 :global(.quill-editor) {
   cursor: text;
 }
+:global(.AddBlockInput--active .ql-toolbar) {
+  visibility: hidden;
+}

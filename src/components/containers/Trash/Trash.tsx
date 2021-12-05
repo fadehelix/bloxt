@@ -23,7 +23,6 @@ function Trash() {
 
   useEffect(() => {
     if (!blocks.length) return;
-    console.log('empty!!!');
     emptyTrash(defaultContainers.trash);
     notification({ type: 'info', message: 'Blocks has been deleted.' });
   }, [blocks, emptyTrash, notification]);

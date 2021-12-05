@@ -2,5 +2,9 @@
   :global(.toolbar) & {
     margin-top: 10px;
     width: 100%;
+    visibility: hidden;
+  }
+  :global(.AddBlockInput--active) & {
+    visibility: visible;
   }
 }

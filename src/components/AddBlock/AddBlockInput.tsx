@@ -1,13 +1,20 @@
 import { useState } from 'react';
+import classnames from 'classnames';
 import TextEditor from '../Editor/RichTextEditor';
 import AddBlockButton from './AddBlockButton';
 
 function AddBlockInput() {
   const [value, setValue] = useState('');
+  const [active, setActive] = useState(false);
 
   return (
     <>
-      <div className="AddBlockInput">
+      <div
+        className={classnames('AddBlockInput', {
+          'AddBlockInput--active': active,
+        })}
+        onFocus={() => setActive(true)}
+      >
         <TextEditor
           initialValue={value}
           handleValue={(editorValue) => {
@@ -17,7 +24,10 @@ function AddBlockInput() {
         <AddBlockButton
           content={value}
           title=""
-          clearInputs={() => setValue('')}
+          clearInputs={() => {
+            setValue('');
+            setActive(false);
+          }}
         />
       </div>
     </>
