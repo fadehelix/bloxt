@@ -3,6 +3,7 @@ import { v4 as uuid } from 'uuid';
 import AddIcon from '@mui/icons-material/Add';
 import { useStoreActions } from '../../hooks/store.hooks';
 import { Button } from '../Form/index';
+import { isBlockContentEmpty } from '../../utils/validation';
 import style from './AddBlockButton.module.scss';
 
 type Props = {
@@ -17,16 +18,15 @@ function AddBlockButton({ title, content, clearInputs }: Props) {
     (actions) => actions.showNotification
   );
   const clickHandler = () => {
-    if (!content) {
+    if (isBlockContentEmpty(content)) {
       showNotification({
         type: 'error',
         message: 'Block content cannot be empty',
       });
       return;
     }
-    const id = uuid();
     createBlock({
-      id,
+      id: uuid(),
       title,
       content,
     });
