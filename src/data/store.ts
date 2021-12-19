@@ -6,9 +6,8 @@ import blockFactory from '../components/Block/blockFactory';
 import { defaultContainers } from '.';
 
 const initialBlocks: BlockType[] = [
-  '<h2>Bloxt is a text editor to build an article from blocks</h2>',
-  'You can write down your ideas and <strong>sort them </strong>later',
-  'If there is something you can keep for later use then put the block in <i>Notes</i> area',
+  '<h2>Bloxt is a text editor that allows you to build article from blocks</h2>',
+  'Just write down your ideas and <strong>sort them </strong>later by dragging up and donw',
 ].map((content) =>
   blockFactory({
     title: 'Optional description for this block',
