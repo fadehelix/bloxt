@@ -1,17 +1,20 @@
 import { createStore, action } from 'easy-peasy';
 import { v4 as uuid } from 'uuid';
-import StoreModel from './data/store.model';
-import { defaultContainers } from './data';
+import StoreModel from './store.model';
+import BlockType from './block.model';
+import blockFactory from '../components/Block/blockFactory';
+import { defaultContainers } from '.';
 
-const initialBlocks = [
+const initialBlocks: BlockType[] = [
   '<h2>Bloxt is a text editor to build an article from blocks</h2>',
   'You can write down your ideas and <strong>sort them </strong>later',
   'If there is something you can keep for later use then put the block in <i>Notes</i> area',
-].map((content) => ({
-  id: uuid(),
-  title: 'Optional description for this block',
-  content: content,
-}));
+].map((content) =>
+  blockFactory({
+    title: 'Optional description for this block',
+    content: content,
+  })
+);
 
 const initialContainers = [
   defaultContainers.board,

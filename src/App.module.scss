@@ -1,24 +1,28 @@
-$sidebar-width: 300px;
+@use './globals.scss';
+
+$sidebar-width: 80px;
+$app-maxWidth: 1900px;
 .root {
   box-sizing: border-box;
   height: 100vh;
   margin: 0 auto;
   overflow: hidden;
-  padding: 0;
-  max-width: 1200px;
+  padding: 0 15px;
+  max-width: $app-maxWidth;
   min-width: 1140px;
 }
 .main {
   box-sizing: border-box;
   display: flex;
-  height: calc(100% - 200px);
+  height: calc(100% - globals.$app-header__height);
   justify-content: space-between;
   padding: 15px;
   width: 100%;
 }
 .sidebar {
+  align-items: center;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: center;
   width: $sidebar-width;
 }

@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { createStore, StoreProvider } from 'easy-peasy';
 import { SnackbarProvider } from 'notistack';
-import { model } from '../../store';
+import { model } from '../../data/store';
 
 import Notification from './Notification';
 

@@ -6,6 +6,7 @@ import style from './Text.module.scss';
 interface Props {
   fieldId: string;
   saveHandler: (fieldId: string, value: string) => void;
+  mode?: string;
   initialValue?: string;
   component?: (
     initialValue: string,
@@ -13,8 +14,14 @@ interface Props {
   ) => React.ReactElement;
 }
 
-function Text({ fieldId, initialValue = '', component, saveHandler }: Props) {
-  const [editMode, setEditMode] = useState(false);
+function Text({
+  fieldId,
+  mode,
+  initialValue = '',
+  component,
+  saveHandler,
+}: Props) {
+  const [editMode, setEditMode] = useState(mode === 'edit');
   const [value, setValue] = useState(initialValue);
   return (
     <div onDoubleClick={() => setEditMode(true)}>

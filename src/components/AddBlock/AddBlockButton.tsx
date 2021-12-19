@@ -1,9 +1,8 @@
-import React from 'react';
-import { v4 as uuid } from 'uuid';
 import AddIcon from '@mui/icons-material/Add';
 import { useStoreActions } from '../../hooks/store.hooks';
 import { Button } from '../Form/index';
 import { isBlockContentEmpty } from '../../utils/validation';
+import blockFactory from '../Block/blockFactory';
 import style from './AddBlockButton.module.scss';
 
 type Props = {
@@ -25,11 +24,7 @@ function AddBlockButton({ title, content, clearInputs }: Props) {
       });
       return;
     }
-    createBlock({
-      id: uuid(),
-      title,
-      content,
-    });
+    createBlock(blockFactory({ content, title }));
     clearInputs();
   };
   return (

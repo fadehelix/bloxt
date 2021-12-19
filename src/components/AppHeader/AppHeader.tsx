@@ -1,4 +1,3 @@
-import React from 'react';
 import style from './AppHeader.module.scss';
 
 function AppHeader() {

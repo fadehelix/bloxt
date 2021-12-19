@@ -5,7 +5,7 @@ import {
   DropResult,
 } from 'react-beautiful-dnd';
 import { useStoreActions, useStoreState } from './hooks/store.hooks';
-import { AppHeader, Board, Notes, Trash } from './components';
+import { AppHeader, Board, Trash } from './components';
 import BlockType from './data/block.model';
 import style from './App.module.scss';
 import Block from './data/block.model';
@@ -44,17 +44,6 @@ const move = (
 function App() {
   const blocks = useStoreState((state) => state.blocks);
   const reorderBlocks = useStoreActions((actions) => actions.reorderBlocks);
-  // const { enqueueSnackbar } = useSnackbar();
-  // const notification = useStoreState((state) => state.notification);
-
-  // useEffect(() => {
-  //   if (!notification) return;
-  //   const { type, message } = notification;
-  //   enqueueSnackbar(message, {
-  //     variant: type,
-  //     autoHideDuration: 5000,
-  //   });
-  // }, [notification, enqueueSnackbar]);
 
   function onDragEnd(result: DropResult) {
     const { source, destination } = result;
@@ -86,11 +75,16 @@ function App() {
       <AppHeader />
       <main className={style.main}>
         <DragDropContext onDragEnd={onDragEnd}>
+          {/* <div className={style.sidebar}>N</div> */}
           <Board />
-          <aside className={style.sidebar}>
-            <Notes />
+          <div className={style.sidebar}>
             <Trash />
-          </aside>
+          </div>
+
+          {/* <aside className={style.sidebar}>
+            <Notes />
+            
+          </aside> */}
         </DragDropContext>
       </main>
       <Alert />

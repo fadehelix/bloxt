@@ -9,3 +9,4 @@ export { default as HtmlPreview } from './HtmlPreview/HtmlPreview';
 export { default as Trash } from './containers/Trash/Trash';
 export { default as DraggableBlock } from './Block/DraggableBlock';
 export { default as BlockList } from './BlockList/BlockList';
+export { default as AddEmptyBlockButton } from './AddBlock/AddEmptyBlockButton';

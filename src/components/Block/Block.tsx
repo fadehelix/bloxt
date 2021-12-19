@@ -12,12 +12,12 @@ type BlockProps = {
 };
 
 function Block({ data }: BlockProps) {
-  const { content } = data;
+  const { content, mode } = data;
   const [isActive, setIsActive] = useState(false);
   const editBlock = useStoreActions((actions) => actions.editBlock);
 
   const handleSaveText = (fieldId: string, value: string) => {
-    editBlock({ ...data, [fieldId]: value });
+    editBlock({ ...data, [fieldId]: value, mode: 'read' });
   };
 
   return (
@@ -48,6 +48,7 @@ function Block({ data }: BlockProps) {
         <TextComponent
           fieldId="content"
           initialValue={content}
+          mode={mode}
           saveHandler={handleSaveText}
           component={(initialValue, handleValue) => {
             return (
