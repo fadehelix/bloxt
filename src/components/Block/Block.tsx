@@ -26,24 +26,6 @@ function Block({ data }: BlockProps) {
       onMouseEnter={() => setIsActive(true)}
       onMouseLeave={() => setIsActive(false)}
     >
-      {/* {
-        <div className={style.blockTitle}>
-          <TextComponent
-            fieldId="title"
-            initialValue={title}
-            saveHandler={handleSaveText}
-            component={(initialValue, handleValue) => {
-              return (
-                <PureTextEditor
-                  initialValue={initialValue}
-                  // @ts-ignore
-                  handleValue={handleValue}
-                />
-              );
-            }}
-          />
-        </div>
-      } */}
       <div className={style.blockContent}>
         <TextComponent
           fieldId="content"

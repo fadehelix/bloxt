@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { useStoreActions } from '../../hooks/store.hooks';
 import { HtmlPreview } from '../index';
 import ToggleEditBtn from './ToggleEditBtn/ToggleEditBtn';
+import { isBlockContentEmpty } from '../../utils/validation';
 import style from './Text.module.scss';
 
 interface Props {
@@ -23,16 +25,25 @@ function Text({
 }: Props) {
   const [editMode, setEditMode] = useState(mode === 'edit');
   const [value, setValue] = useState(initialValue);
+  const showNotification = useStoreActions(
+    (actions) => actions.showNotification
+  );
+
+  const handleClickEdit = () => {
+    if (isBlockContentEmpty(value)) {
+      showNotification({
+        type: 'warning',
+        message: 'Block content cannot be empty',
+      });
+      return;
+    }
+    setEditMode(!editMode);
+    saveHandler(fieldId, value);
+  };
   return (
     <div onDoubleClick={() => setEditMode(true)}>
       <div className={style.actionIcon}>
-        <ToggleEditBtn
-          editMode={editMode}
-          clickHandler={() => {
-            setEditMode(!editMode);
-            saveHandler(fieldId, value);
-          }}
-        />
+        <ToggleEditBtn editMode={editMode} clickHandler={handleClickEdit} />
       </div>
       {editMode ? (
         component &&
