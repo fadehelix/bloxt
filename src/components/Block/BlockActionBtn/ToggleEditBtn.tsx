@@ -1,5 +1,5 @@
+import IconButton from '@mui/material/IconButton';
 import { Save as SaveIcon, Edit as EditIcon } from '@mui/icons-material';
-import style from './ToggleEditBtn.module.scss';
 
 type Props = {
   editMode: boolean;
@@ -7,10 +7,11 @@ type Props = {
 };
 
 function ToggleEditBtn({ editMode, clickHandler }: Props) {
+  const title = editMode ? 'Save' : 'Edit';
   return (
-    <div className={style.root} onClick={() => clickHandler()}>
+    <IconButton title={title} aria-label={title} onClick={() => clickHandler()}>
       {editMode ? <SaveIcon /> : <EditIcon />}
-    </div>
+    </IconButton>
   );
 }
 

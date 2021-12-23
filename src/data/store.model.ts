@@ -9,6 +9,7 @@ type StoreModel = {
   createBlock: Action<StoreModel, Block>;
   reorderBlocks: Action<StoreModel, reorderBlocksPayload>;
   editBlock: Action<StoreModel, Block>;
+  deleteBlock: Action<StoreModel, Block['id']>;
   emptyContainer: Action<StoreModel, string>;
   containers: string[];
   notification: INotification | null;

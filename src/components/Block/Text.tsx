@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import { useStoreActions } from '../../hooks/store.hooks';
 import { HtmlPreview } from '../index';
-import ToggleEditBtn from './ToggleEditBtn/ToggleEditBtn';
+import ToggleEditBtn from './BlockActionBtn/ToggleEditBtn';
+import BlockActionBtn from './BlockActionBtn/BlockActionBtn';
 import { isBlockContentEmpty } from '../../utils/validation';
 import style from './Text.module.scss';
 
 interface Props {
   fieldId: string;
   saveHandler: (fieldId: string, value: string) => void;
+  deleteHandler: () => void;
   mode?: string;
   initialValue?: string;
   component?: (
@@ -22,6 +24,7 @@ function Text({
   initialValue = '',
   component,
   saveHandler,
+  deleteHandler,
 }: Props) {
   const [editMode, setEditMode] = useState(mode === 'edit');
   const [value, setValue] = useState(initialValue);
@@ -40,9 +43,15 @@ function Text({
     setEditMode(!editMode);
     saveHandler(fieldId, value);
   };
+
+  const handleDelete = () => {
+    deleteHandler();
+  };
+
   return (
     <div onDoubleClick={() => setEditMode(true)}>
       <div className={style.actionIcon}>
+        <BlockActionBtn title="Delete block" clickHandler={handleDelete} />
         <ToggleEditBtn editMode={editMode} clickHandler={handleClickEdit} />
       </div>
       {editMode ? (

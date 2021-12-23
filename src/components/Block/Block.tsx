@@ -15,6 +15,15 @@ function Block({ data }: BlockProps) {
   const { content, mode } = data;
   const [isActive, setIsActive] = useState(false);
   const editBlock = useStoreActions((actions) => actions.editBlock);
+  const deleteBlock = useStoreActions((actions) => actions.deleteBlock);
+  const showNotification = useStoreActions(
+    (actions) => actions.showNotification
+  );
+
+  const handleDelete = () => {
+    deleteBlock(data.id);
+    showNotification({ type: 'success', message: 'Block has been deleted' });
+  };
 
   const handleSaveText = (fieldId: string, value: string) => {
     editBlock({ ...data, [fieldId]: value, mode: 'read' });
@@ -32,6 +41,7 @@ function Block({ data }: BlockProps) {
           initialValue={content}
           mode={mode}
           saveHandler={handleSaveText}
+          deleteHandler={handleDelete}
           component={(initialValue, handleValue) => {
             return (
               <RichTextEditor

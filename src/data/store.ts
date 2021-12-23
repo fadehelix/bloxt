@@ -41,6 +41,11 @@ const model: StoreModel = {
       }
     });
   }),
+  deleteBlock: action((state, payload) => {
+    state.blocks[defaultContainers.board] = state.blocks[
+      defaultContainers.board
+    ].filter((block) => block.id !== payload);
+  }),
   emptyContainer: action((state, payload) => {
     state.blocks[payload].length = 0;
   }),
