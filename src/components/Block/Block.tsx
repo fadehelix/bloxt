@@ -31,7 +31,7 @@ function Block({ data }: BlockProps) {
 
   return (
     <section
-      className={classnames(style.root, { 'block--active': isActive })}
+      className={classnames(style.root, 'Block', { 'block--active': isActive })}
       onMouseEnter={() => setIsActive(true)}
       onMouseLeave={() => setIsActive(false)}
     >

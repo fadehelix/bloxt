@@ -8,8 +8,14 @@ type Props = {
 
 function ToggleEditBtn({ editMode, clickHandler }: Props) {
   const title = editMode ? 'Save' : 'Edit';
+  const cssClass = editMode ? 'ButtonSave' : 'ButtonEdit';
   return (
-    <IconButton title={title} aria-label={title} onClick={() => clickHandler()}>
+    <IconButton
+      title={title}
+      aria-label={title}
+      onClick={() => clickHandler()}
+      className={cssClass}
+    >
       {editMode ? <SaveIcon /> : <EditIcon />}
     </IconButton>
   );
