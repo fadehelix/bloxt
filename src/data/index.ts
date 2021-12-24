@@ -1,5 +1,5 @@
 export enum defaultContainers {
-  board = 'BOARD',
-  notes = 'NOTES',
-  trash = 'TRASH',
+  Board = 'BOARD',
+  Notes = 'NOTES',
+  Trash = 'TRASH',
 }

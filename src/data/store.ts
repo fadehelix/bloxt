@@ -16,25 +16,25 @@ const initialBlocks: BlockType[] = [
 );
 
 const initialContainers = [
-  defaultContainers.board,
-  defaultContainers.notes,
-  defaultContainers.trash,
+  defaultContainers.Board,
+  defaultContainers.Notes,
+  defaultContainers.Trash,
 ];
 const model: StoreModel = {
   blocks: {
-    [defaultContainers.board]: initialBlocks,
-    [defaultContainers.notes]: [],
-    [defaultContainers.trash]: [],
+    [defaultContainers.Board]: initialBlocks,
+    [defaultContainers.Notes]: [],
+    [defaultContainers.Trash]: [],
   },
   createBlock: action((state, payload) => {
-    state.blocks[defaultContainers.board].push(payload);
+    state.blocks[defaultContainers.Board].push(payload);
   }),
   reorderBlocks: action((state, payload) => {
     state.blocks = payload;
   }),
   editBlock: action((state, payload) => {
     const blockId = payload.id;
-    state.blocks[defaultContainers.board].forEach((block) => {
+    state.blocks[defaultContainers.Board].forEach((block) => {
       if (block.id === blockId) {
         block.title = payload.title;
         block.content = payload.content;
@@ -42,8 +42,8 @@ const model: StoreModel = {
     });
   }),
   deleteBlock: action((state, payload) => {
-    state.blocks[defaultContainers.board] = state.blocks[
-      defaultContainers.board
+    state.blocks[defaultContainers.Board] = state.blocks[
+      defaultContainers.Board
     ].filter((block) => block.id !== payload);
   }),
   emptyContainer: action((state, payload) => {

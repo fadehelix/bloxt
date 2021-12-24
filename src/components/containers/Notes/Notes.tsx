@@ -10,11 +10,11 @@ const getListStyle = (isDraggingOver: boolean) => ({
 
 function Notes() {
   const blocks = useStoreState(
-    (state) => state.blocks[defaultContainers.notes]
+    (state) => state.blocks[defaultContainers.Notes]
   );
 
   return (
-    <Droppable droppableId={defaultContainers.notes}>
+    <Droppable droppableId={defaultContainers.Notes}>
       {(provided, snapshot) => (
         <div
           ref={provided.innerRef}

@@ -8,7 +8,7 @@ import { AddEmptyBlockButton } from '../../index';
 
 function Board() {
   const blocks = useStoreState(
-    (state) => state.blocks[defaultContainers.board]
+    (state) => state.blocks[defaultContainers.Board]
   );
 
   return (
@@ -17,7 +17,7 @@ function Board() {
         {/* <div className={classnames(style.Toolbar, 'toolbar')}>
         <AddBlockInput />
       </div> */}
-        <Droppable droppableId={defaultContainers.board}>
+        <Droppable droppableId={defaultContainers.Board}>
           {(provided, snapshot) => (
             <div
               ref={provided.innerRef}

@@ -16,19 +16,19 @@ const getListStyle = (isDraggingOver: boolean) =>
 
 function Trash() {
   const blocks = useStoreState(
-    (state) => state.blocks[defaultContainers.trash]
+    (state) => state.blocks[defaultContainers.Trash]
   );
   const emptyTrash = useStoreActions((action) => action.emptyContainer);
   const notification = useStoreActions((action) => action.showNotification);
 
   useEffect(() => {
     if (!blocks.length) return;
-    emptyTrash(defaultContainers.trash);
+    emptyTrash(defaultContainers.Trash);
     notification({ type: 'info', message: 'Blocks has been deleted.' });
   }, [blocks, emptyTrash, notification]);
 
   return (
-    <Droppable droppableId={defaultContainers.trash}>
+    <Droppable droppableId={defaultContainers.Trash}>
       {(provided, snapshot) => (
         <div
           ref={provided.innerRef}
