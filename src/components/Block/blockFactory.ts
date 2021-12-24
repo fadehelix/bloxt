@@ -3,6 +3,11 @@ import BlockType from '../../data/block.model';
 
 type BlockFactoryParams = Omit<BlockType, 'id'>;
 
+/**
+ * Block entity
+ * @param blockParams
+ * @returns
+ */
 function blockFactory(blockParams: BlockFactoryParams): BlockType {
   return {
     id: uuid(),
