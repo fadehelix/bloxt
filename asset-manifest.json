@@ -1,31 +1,31 @@
 {
   "files": {
-    "main.css": "/bloxt/static/css/main.d79090a3.chunk.css",
-    "main.js": "/bloxt/static/js/main.bd63c6c9.chunk.js",
-    "main.js.map": "/bloxt/static/js/main.bd63c6c9.chunk.js.map",
+    "main.css": "/bloxt/static/css/main.a7bd10a1.chunk.css",
+    "main.js": "/bloxt/static/js/main.96770ae1.chunk.js",
+    "main.js.map": "/bloxt/static/js/main.96770ae1.chunk.js.map",
     "runtime-main.js": "/bloxt/static/js/runtime-main.d2926b04.js",
     "runtime-main.js.map": "/bloxt/static/js/runtime-main.d2926b04.js.map",
     "static/css/2.37f20349.chunk.css": "/bloxt/static/css/2.37f20349.chunk.css",
-    "static/js/2.2376348c.chunk.js": "/bloxt/static/js/2.2376348c.chunk.js",
-    "static/js/2.2376348c.chunk.js.map": "/bloxt/static/js/2.2376348c.chunk.js.map",
+    "static/js/2.f0dfd8fa.chunk.js": "/bloxt/static/js/2.f0dfd8fa.chunk.js",
+    "static/js/2.f0dfd8fa.chunk.js.map": "/bloxt/static/js/2.f0dfd8fa.chunk.js.map",
     "static/js/3.9a939459.chunk.js": "/bloxt/static/js/3.9a939459.chunk.js",
     "static/js/3.9a939459.chunk.js.map": "/bloxt/static/js/3.9a939459.chunk.js.map",
     "index.html": "/bloxt/index.html",
     "static/css/2.37f20349.chunk.css.map": "/bloxt/static/css/2.37f20349.chunk.css.map",
-    "static/css/main.d79090a3.chunk.css.map": "/bloxt/static/css/main.d79090a3.chunk.css.map",
-    "static/js/2.2376348c.chunk.js.LICENSE.txt": "/bloxt/static/js/2.2376348c.chunk.js.LICENSE.txt",
+    "static/css/main.a7bd10a1.chunk.css.map": "/bloxt/static/css/main.a7bd10a1.chunk.css.map",
+    "static/js/2.f0dfd8fa.chunk.js.LICENSE.txt": "/bloxt/static/js/2.f0dfd8fa.chunk.js.LICENSE.txt",
     "static/media/Notes.module.scss": "/bloxt/static/media/notes_icon.0144cee1.svg",
     "static/media/300.css": "/bloxt/static/media/roboto-vietnamese-300-normal.af9afdc1.woff2",
     "static/media/400.css": "/bloxt/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2",
     "static/media/500.css": "/bloxt/static/media/roboto-vietnamese-500-normal.b8e494da.woff2",
     "static/media/700.css": "/bloxt/static/media/roboto-vietnamese-700-normal.3096f18a.woff2",
-    "static/media/Trash.module.scss": "/bloxt/static/media/trash_icon.dec8e820.svg"
+    "static/media/Trash.module.scss": "/bloxt/static/media/trash_icon.4d54572b.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d2926b04.js",
     "static/css/2.37f20349.chunk.css",
-    "static/js/2.2376348c.chunk.js",
-    "static/css/main.d79090a3.chunk.css",
-    "static/js/main.bd63c6c9.chunk.js"
+    "static/js/2.f0dfd8fa.chunk.js",
+    "static/css/main.a7bd10a1.chunk.css",
+    "static/js/main.96770ae1.chunk.js"
   ]
 }
