@@ -26,3 +26,8 @@ $app-maxWidth: 1900px;
   justify-content: center;
   width: $sidebar-width;
 }
+.board {
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow-y: auto;
+}

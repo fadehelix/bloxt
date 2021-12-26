@@ -75,16 +75,13 @@ function App() {
       <AppHeader />
       <main className={style.main}>
         <DragDropContext onDragEnd={onDragEnd}>
-          {/* <div className={style.sidebar}>N</div> */}
-          <Board />
-          <div className={style.sidebar}>
+          <div className={style.sidebar}></div>
+          <section className={style.board}>
+            <Board />
+          </section>
+          <section className={style.sidebar}>
             <Trash />
-          </div>
-
-          {/* <aside className={style.sidebar}>
-            <Notes />
-            
-          </aside> */}
+          </section>
         </DragDropContext>
       </main>
       <Alert />

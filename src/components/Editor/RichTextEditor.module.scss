@@ -1,15 +1,21 @@
-:global(.quill) {
-  height: 350px;
+@use '../../globals.scss';
+
+:global(.ql-toolbar.ql-snow) {
+  border: none;
 }
 :global(.toolbar) :global(.quill) {
   height: auto;
 }
 
-:global(.quill-cointainer) {
-  height: 85%;
-}
-:global(.quill-editor) {
+:global(.ql-container) {
   cursor: text;
+  font-size: inherit;
+}
+:global(.ql-editor) {
+  cursor: text;
+}
+:global(.ql-container.ql-snow) {
+  border: none;
 }
 :global(.AddBlockInput--active .ql-toolbar) {
   visibility: hidden;

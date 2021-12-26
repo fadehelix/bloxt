@@ -9,8 +9,11 @@ import style from './Trash.module.scss';
 const getListStyle = (isDraggingOver: boolean) =>
   isDraggingOver
     ? {
-        boxShadow: '0px 0px 10px -2px rgba(0, 0, 0, 1)',
+        boxShadow: '-5px 0px 10px -5px rgba(0, 0, 0, 1)',
+        color: 'white',
         backgroundColor: 'orangered',
+        transform: 'translateX(-100px)',
+        width: '250px',
       }
     : {};
 
@@ -36,7 +39,6 @@ function Trash() {
           className={style.root}
           style={getListStyle(snapshot.isDraggingOver)}
         >
-          <h3 className={style.title}>Delete it!</h3>
           <BlockList blocks={blocks} />
           {provided.placeholder}
         </div>

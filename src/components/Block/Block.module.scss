@@ -7,7 +7,7 @@ $bg-color: white;
   position: relative;
 
   &:hover {
-    border: 1px solid #666;
+    border: 1px solid #000;
   }
 }
 .blockTitle {
@@ -28,11 +28,3 @@ $bg-color: white;
 .blockContent {
   position: relative;
 }
-// .actionIcon {
-//   position: absolute;
-//   right: 5px;
-//   visibility: hidden;
-// }
-// :global(.block--active) .actionIcon {
-//   visibility: visible;
-// }
