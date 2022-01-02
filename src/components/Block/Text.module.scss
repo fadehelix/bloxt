@@ -1,6 +1,11 @@
 .actionIcon {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 4px;
   position: absolute;
-  right: 5px;
+  right: 0;
+  top: 0;
   visibility: hidden;
 }
 :global(.block--active) .actionIcon {
