@@ -6,6 +6,7 @@ import BlockType from '../../data/block.model';
 import TextComponent from './Text';
 
 import style from './Block.module.scss';
+import { notificationMessages } from '../../data/notification.model';
 
 type BlockProps = {
   data: BlockType;
@@ -22,7 +23,10 @@ function Block({ data }: BlockProps) {
 
   const handleDelete = () => {
     deleteBlock(data.id);
-    showNotification({ type: 'success', message: 'Block has been deleted' });
+    showNotification({
+      type: 'success',
+      message: notificationMessages.BlockDeletedSuccess,
+    });
   };
 
   const handleSaveText = (fieldId: string, value: string) => {

@@ -5,6 +5,7 @@ import ToggleEditBtn from './BlockActions/ToggleEditBtn';
 import BlockActionBtn from './BlockActions/BlockActionBtn';
 import { isBlockContentEmpty } from '../../utils/validation';
 import style from './Text.module.scss';
+import { notificationMessages } from '../../data/notification.model';
 
 interface Props {
   fieldId: string;
@@ -36,7 +37,7 @@ function Text({
     if (isBlockContentEmpty(value)) {
       showNotification({
         type: 'warning',
-        message: 'Block content cannot be empty',
+        message: notificationMessages.BlockCannotBeEmpty,
       });
       return;
     }

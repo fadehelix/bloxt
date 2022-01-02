@@ -5,6 +5,7 @@ import { BlockList } from '../../index';
 import { defaultContainers } from '../../../data';
 
 import style from './Trash.module.scss';
+import { notificationMessages } from '../../../data/notification.model';
 
 const getListStyle = (isDraggingOver: boolean) =>
   isDraggingOver
@@ -27,7 +28,10 @@ function Trash() {
   useEffect(() => {
     if (!blocks.length) return;
     emptyTrash(defaultContainers.Trash);
-    notification({ type: 'info', message: 'Blocks has been deleted.' });
+    notification({
+      type: 'info',
+      message: notificationMessages.BlockDeletedSuccess,
+    });
   }, [blocks, emptyTrash, notification]);
 
   return (

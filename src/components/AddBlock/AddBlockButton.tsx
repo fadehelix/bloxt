@@ -4,6 +4,7 @@ import { Button } from '../Form/index';
 import { isBlockContentEmpty } from '../../utils/validation';
 import blockFactory from '../Block/blockFactory';
 import style from './AddBlockButton.module.scss';
+import { notificationMessages } from '../../data/notification.model';
 
 type Props = {
   title: string;
@@ -20,7 +21,7 @@ function AddBlockButton({ title, content, clearInputs }: Props) {
     if (isBlockContentEmpty(content)) {
       showNotification({
         type: 'error',
-        message: 'Block content cannot be empty',
+        message: notificationMessages.BlockCannotBeEmpty,
       });
       return;
     }
