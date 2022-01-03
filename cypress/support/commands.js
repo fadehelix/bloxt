@@ -23,7 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-Cypress.Commands.add('editBlock', (id = 0) => {
+
+Cypress.Commands.add('enterBlockEditMode', (id = 0) => {
   cy.get('.Block').eq(id).trigger('mouseover');
   cy.get('.ButtonEdit').eq(id).click();
 });
+
+

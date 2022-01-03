@@ -9,3 +9,9 @@ Feature: Block
         And I save Block
         Then I see block with text "replaced block content"
 
+    Scenario: Avoid to create an empty block
+        Given I am in the Block edit mode
+        And Block content is empty
+        When I save Block
+        Then I see notification "Block content cannot be empty"
+        And I am still in the Block edit mode

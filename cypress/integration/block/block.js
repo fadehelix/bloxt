@@ -1,15 +1,24 @@
 import { Before, Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 
+const isTextEditorVisible = () => cy.get('.quill').eq(0).should('be.visible');
+
 Before(() => {
   cy.visit('http://localhost:3000');
 });
-
 Given('I see at least one block', () => {
   cy.get('.Block');
 });
 
 When('I click block Edit button', () => {
-  cy.editBlock(0);
+  cy.enterBlockEditMode(0);
+  isTextEditorVisible();
+});
+
+Given('I am in the Block edit mode', function () {
+  cy.enterBlockEditMode(0);
+});
+Given('Block content is empty', function () {
+  cy.get('[contentEditable=true]').first().clear();
 });
 
 When('I replace content with text {string}', (text) => {
@@ -18,6 +27,13 @@ When('I replace content with text {string}', (text) => {
 When('I save Block', () => {
   cy.get('.ButtonSave').first().click();
 });
+
 Then('I see block with text {string}', (text) => {
   cy.get('.Block').eq(0).should('have.text', text);
+});
+Then('I see notification {string}', function (message) {
+  cy.get('[role="alert"]').eq(0).should('have.text', message);
+});
+Then('I am still in the Block edit mode', function () {
+  isTextEditorVisible();
 });
