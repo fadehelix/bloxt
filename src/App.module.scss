@@ -4,7 +4,6 @@ $sidebar-width: 80px;
 $app-maxWidth: 1900px;
 .root {
   box-sizing: border-box;
-  height: 100vh;
   margin: 0 auto;
   overflow: hidden;
   padding: 0 15px;
@@ -28,5 +27,4 @@ $app-maxWidth: 1900px;
 .board {
   margin: 0 auto;
   max-width: 1200px;
-  overflow-y: auto;
 }

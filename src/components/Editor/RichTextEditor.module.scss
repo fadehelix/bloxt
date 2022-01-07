@@ -20,3 +20,6 @@
 :global(.AddBlockInput--active .ql-toolbar) {
   visibility: hidden;
 }
+:global(.ql-tooltip) {
+  z-index: 1000;
+}
