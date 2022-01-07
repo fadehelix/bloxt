@@ -31,9 +31,6 @@ When('I save Block', () => {
 Then('I see block with text {string}', (text) => {
   cy.get('.Block').eq(0).should('have.text', text);
 });
-Then('I see notification {string}', function (message) {
-  cy.get('[role="alert"]').eq(0).should('have.text', message);
-});
 Then('I am still in the Block edit mode', function () {
   isTextEditorVisible();
 });

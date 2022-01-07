@@ -1,0 +1,11 @@
+import { Before, Given } from 'cypress-cucumber-preprocessor/steps';
+
+// 'Bloxt is a text editor that allows you to build article from blocks Just write down your ideas and sort them later by dragging up and down'
+
+Before(() => {
+  cy.visit('http://localhost:3000');
+});
+
+Given('Board contains text {string}', (text) => {
+  cy.get('main').contains(text);
+});

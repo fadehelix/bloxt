@@ -54,6 +54,10 @@ const model: StoreModel = {
   showNotification: action((state, payload) => {
     state.notification = payload;
   }),
+  boardContent: '',
+  updateBoardContent: action((state, payload) => {
+    state.boardContent = payload;
+  }),
 };
 const store = createStore<StoreModel>(model);
 

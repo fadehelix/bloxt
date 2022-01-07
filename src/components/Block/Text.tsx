@@ -6,6 +6,7 @@ import BlockActionBtn from './BlockActions/BlockActionBtn';
 import { isBlockContentEmpty } from '../../utils/validation';
 import style from './Text.module.scss';
 import { notificationMessages } from '../../data/notification.model';
+import classNames from 'classnames';
 
 interface Props {
   fieldId: string;
@@ -55,14 +56,16 @@ function Text({
         <ToggleEditBtn editMode={editMode} clickHandler={handleClickEdit} />
         <BlockActionBtn title="Delete block" clickHandler={handleDelete} />
       </div>
-      {editMode ? (
-        component &&
-        component(value, (value: string) => {
-          setValue(value);
-        })
-      ) : (
-        <HtmlPreview value={value} />
-      )}
+      <div className={classNames('BlockContent', style.blockContent)}>
+        {editMode ? (
+          component &&
+          component(value, (value: string) => {
+            setValue(value);
+          })
+        ) : (
+          <HtmlPreview value={value} />
+        )}
+      </div>
     </div>
   );
 }

@@ -14,6 +14,8 @@ type StoreModel = {
   containers: string[];
   notification: INotification | null;
   showNotification: Action<StoreModel, INotification>;
+  boardContent: string;
+  updateBoardContent: Action<StoreModel, string>;
 };
 
 export default StoreModel;
