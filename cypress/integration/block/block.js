@@ -5,9 +5,6 @@ const isTextEditorVisible = () => cy.get('.quill').eq(0).should('be.visible');
 Before(() => {
   cy.visit('http://localhost:3000');
 });
-Given('I see at least one block', () => {
-  cy.get('.Block');
-});
 
 When('I click block Edit button', () => {
   cy.enterBlockEditMode(0);

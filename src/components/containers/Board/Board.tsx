@@ -3,7 +3,8 @@ import classnames from 'classnames';
 import { useStoreState } from '../../../hooks/store.hooks';
 import { BlockList } from '../../index';
 import { defaultContainers } from '../../../data';
-import CopyToClipboardButton from '../../CopyToClipboardButton/CopyToClipboardButton';
+import CopyToClipboardButton from '../../BoardActions/buttons/CopyToClipboardButton';
+import DeleteAllButton from '../../BoardActions/buttons/DeleteAll';
 import style from './Board.module.scss';
 
 import { AddEmptyBlockButton } from '../../index';
@@ -18,6 +19,7 @@ function Board(props: BoardProps) {
   return (
     <div {...props}>
       <CopyToClipboardButton text="Test copy" />
+      <DeleteAllButton />
       <Droppable droppableId={defaultContainers.Board}>
         {(provided, snapshot) => (
           <div

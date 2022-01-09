@@ -30,7 +30,7 @@ function Trash() {
     emptyTrash(defaultContainers.Trash);
     notification({
       type: 'info',
-      message: notificationMessages.BlockDeletedSuccess,
+      message: notificationMessages.Deleted,
     });
   }, [blocks, emptyTrash, notification]);
 

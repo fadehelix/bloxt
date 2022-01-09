@@ -25,7 +25,7 @@ function Block({ data }: BlockProps) {
     deleteBlock(data.id);
     showNotification({
       type: 'success',
-      message: notificationMessages.BlockDeletedSuccess,
+      message: notificationMessages.Deleted,
     });
   };
 

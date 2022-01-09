@@ -1,8 +1,8 @@
 import Button from '@mui/material/Button';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import { useStoreActions } from '../../hooks/store.hooks';
-import { notificationMessages } from '../../data/notification.model';
-import getBoardContent, { asMarkdown } from '../../utils/getBoardContent';
+import { useStoreActions } from '../../../hooks/store.hooks';
+import { notificationMessages } from '../../../data/notification.model';
+import getBoardContent, { asMarkdown } from '../../../utils/getBoardContent';
 
 type Props = {
   text: string;
