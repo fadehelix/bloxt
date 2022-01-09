@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/bloxt/static/css/main.f4d3c2ab.chunk.css",
-    "main.js": "/bloxt/static/js/main.dbcc27ce.chunk.js",
-    "main.js.map": "/bloxt/static/js/main.dbcc27ce.chunk.js.map",
-    "runtime-main.js": "/bloxt/static/js/runtime-main.a3c083ae.js",
-    "runtime-main.js.map": "/bloxt/static/js/runtime-main.a3c083ae.js.map",
+    "main.css": "/bloxt/static/css/main.75fc5ab4.chunk.css",
+    "main.js": "/bloxt/static/js/main.4f6e2046.chunk.js",
+    "main.js.map": "/bloxt/static/js/main.4f6e2046.chunk.js.map",
+    "runtime-main.js": "/bloxt/static/js/runtime-main.1fcc3faf.js",
+    "runtime-main.js.map": "/bloxt/static/js/runtime-main.1fcc3faf.js.map",
     "static/css/2.37f20349.chunk.css": "/bloxt/static/css/2.37f20349.chunk.css",
-    "static/js/2.cd43f212.chunk.js": "/bloxt/static/js/2.cd43f212.chunk.js",
-    "static/js/2.cd43f212.chunk.js.map": "/bloxt/static/js/2.cd43f212.chunk.js.map",
-    "static/js/3.d639e250.chunk.js": "/bloxt/static/js/3.d639e250.chunk.js",
-    "static/js/3.d639e250.chunk.js.map": "/bloxt/static/js/3.d639e250.chunk.js.map",
+    "static/js/2.f0bad737.chunk.js": "/bloxt/static/js/2.f0bad737.chunk.js",
+    "static/js/2.f0bad737.chunk.js.map": "/bloxt/static/js/2.f0bad737.chunk.js.map",
+    "static/js/3.92880eac.chunk.js": "/bloxt/static/js/3.92880eac.chunk.js",
+    "static/js/3.92880eac.chunk.js.map": "/bloxt/static/js/3.92880eac.chunk.js.map",
     "index.html": "/bloxt/index.html",
     "static/css/2.37f20349.chunk.css.map": "/bloxt/static/css/2.37f20349.chunk.css.map",
-    "static/css/main.f4d3c2ab.chunk.css.map": "/bloxt/static/css/main.f4d3c2ab.chunk.css.map",
-    "static/js/2.cd43f212.chunk.js.LICENSE.txt": "/bloxt/static/js/2.cd43f212.chunk.js.LICENSE.txt",
+    "static/css/main.75fc5ab4.chunk.css.map": "/bloxt/static/css/main.75fc5ab4.chunk.css.map",
+    "static/js/2.f0bad737.chunk.js.LICENSE.txt": "/bloxt/static/js/2.f0bad737.chunk.js.LICENSE.txt",
     "static/media/Notes.module.scss": "/bloxt/static/media/notes_icon.0144cee1.svg",
     "static/media/300.css": "/bloxt/static/media/roboto-vietnamese-300-normal.af9afdc1.woff2",
     "static/media/400.css": "/bloxt/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2",
@@ -22,10 +22,10 @@
     "static/media/Trash.module.scss": "/bloxt/static/media/trash_icon.4d54572b.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a3c083ae.js",
+    "static/js/runtime-main.1fcc3faf.js",
     "static/css/2.37f20349.chunk.css",
-    "static/js/2.cd43f212.chunk.js",
-    "static/css/main.f4d3c2ab.chunk.css",
-    "static/js/main.dbcc27ce.chunk.js"
+    "static/js/2.f0bad737.chunk.js",
+    "static/css/main.75fc5ab4.chunk.css",
+    "static/js/main.4f6e2046.chunk.js"
   ]
 }
