@@ -1,4 +1,4 @@
-export interface EditorProps<T> {
-  initialValue: T;
-  handleValue: (value: T) => void;
+export interface EditorProps {
+  initialValue: string;
+  handleValue: (value: string) => void;
 }

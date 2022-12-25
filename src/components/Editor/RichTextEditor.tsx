@@ -5,7 +5,7 @@ import { EditorProps } from './types';
 
 import './RichTextEditor.module.scss';
 
-function RichTextEditor<T>({ initialValue, handleValue }: EditorProps<T>) {
+function RichTextEditor({ initialValue, handleValue }: EditorProps) {
   const [value, setValue] = useState(initialValue);
   const quill = useRef(null);
   const modules = {

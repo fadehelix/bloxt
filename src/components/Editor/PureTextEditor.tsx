@@ -1,17 +1,16 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { EditorProps } from './types';
 
-function PureTextEditor<T>({ initialValue, handleValue }: EditorProps<T>) {
+function PureTextEditor({ initialValue, handleValue }: EditorProps) {
   const [value, setValue] = useState(initialValue);
 
   useEffect(() => {
     handleValue(value);
   }, [value, handleValue]);
 
-  const handleOnChange = (event: any) => {
+  const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.currentTarget.value);
   };
-  // @ts-ignore
   return <input type="text" onChange={handleOnChange} value={value} />;
 }
 
