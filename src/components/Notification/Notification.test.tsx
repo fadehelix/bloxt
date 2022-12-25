@@ -1,3 +1,4 @@
+import { expect } from 'vitest';
 import { render, screen, waitFor } from '@testing-library/react';
 import { createStore, StoreProvider } from 'easy-peasy';
 import { SnackbarProvider } from 'notistack';
@@ -9,7 +10,7 @@ const message = 'some error';
 
 beforeAll(() => {
   const store = createStore(model, {
-    initialState: { notification: { type: 'error', message } },
+    initialState: { notification: { type: 'success', message } },
   });
   const app = (
     <StoreProvider store={store}>
