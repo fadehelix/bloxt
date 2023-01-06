@@ -1,4 +1,4 @@
-import { describe, expect } from 'vitest';
+import { describe, expect, beforeAll, afterEach, it } from 'vitest';
 import getBoardContent, {
   asHtml,
   asMarkdown,
@@ -29,24 +29,24 @@ describe('Get Board Content', () => {
   afterEach(() => {
     defaultContent();
   });
-  test('as HTML', () => {
+  it('as HTML', () => {
     const result = asHtml(content);
     expect(result).toEqual(
       '<h2>First block content</h2><p><strong>Second</strong> block content</p>'
     );
   });
-  test('as plain text', () => {
+  it('as plain text', () => {
     const result = asPlainText(content);
     expect(result).toEqual('First block content\nSecond block content');
   });
 
-  test('as Markdown', () => {
+  it('as Markdown', () => {
     const result = asMarkdown(content);
     expect(result).toEqual(
       '## First block content\n\n**Second** block content'
     );
   });
-  test('only one block as HTML', () => {
+  it('only one block as HTML', () => {
     const defaultContent = document.body.innerHTML;
     document.body.innerHTML = `
       <div class="Board">
@@ -59,7 +59,7 @@ describe('Get Board Content', () => {
     expect(result).toEqual('<h2>First block content</h2>');
     document.body.innerHTML = defaultContent;
   });
-  test('wtf with body content?', () => {
+  it('wtf with body content?', () => {
     const result = asPlainText(content);
     console.log(result);
   });

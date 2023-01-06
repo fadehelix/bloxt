@@ -1,4 +1,4 @@
-import { expect } from 'vitest';
+import { expect, beforeAll, it } from 'vitest';
 import { render, screen, waitFor } from '@testing-library/react';
 import { createStore, StoreProvider } from 'easy-peasy';
 import { SnackbarProvider } from 'notistack';
@@ -23,8 +23,9 @@ beforeAll(() => {
   render(app);
 });
 
-test('Display Notification', async () => {
+it('Display Notification', async () => {
   await waitFor(() => {
+    // @ts-ignore
     expect(screen.getByText(message)).toBeInTheDocument();
   });
 });
