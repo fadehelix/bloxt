@@ -79,9 +79,6 @@ function App() {
           <section className={style.board}>
             <Board />
           </section>
-          <section className={style.sidebar}>
-            <Trash />
-          </section>
         </DragDropContext>
       </main>
       <Alert />
