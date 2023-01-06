@@ -9,7 +9,7 @@
     "@fontsource/roboto": "^4.5.1",
     "@mui/icons-material": "^5.0.4",
     "@mui/material": "^5.0.4",
-    "@types/jest": "^29.2.4",
+    "@types/jest": "^29.2.5",
     "classnames": "^2.3.1",
     "easy-peasy": "^5.0.3",
     "faker": "^5.5.3",
