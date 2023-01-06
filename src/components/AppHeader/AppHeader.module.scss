@@ -1,14 +1,19 @@
 .root {
-  align-items: center;
+  align-items: flex-end;
   display: flex;
-  font-size: 3rem;
-  height: 80px;
-  justify-content: space-between;
+  flex-flow: row nowrap;
+  height: 3rem;
+  justify-content: flex-start;
 }
 
 .title {
-  margin: 0.5rem;
+  margin: 0 0.5rem;
   font-family: monospace;
   font-size: 2rem;
+  line-height: 2rem;
   text-transform: uppercase;
+}
+.slogan {
+  font-family: monospace;
+  font-size: 1.1rem;
 }
