@@ -5,6 +5,7 @@ import svgrPlugin from 'vite-plugin-svgr';
 
 export default defineConfig({
   plugins: [react(), viteTsconfigPaths(), svgrPlugin()],
+  base: "/bloxt/",
   test: {
     globals: true,
     environment: 'jsdom',
