@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import * as ReactQuill from 'react-quill';
+import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { EditorProps } from './types';
 
