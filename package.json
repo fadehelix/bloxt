@@ -71,7 +71,7 @@
     "jsdom": "^20.0.3",
     "prettier": "^2.4.1",
     "sass": "^1.42.1",
-    "vite": "^4.0.3",
+    "vite": "^4.0.4",
     "vite-plugin-svgr": "^2.4.0",
     "vite-tsconfig-paths": "^4.0.3",
     "vitest": "^0.26.2"
