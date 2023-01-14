@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useStoreActions } from '../../hooks/store.hooks';
 import { HtmlPreview } from '../index';
-import ToggleEditBtn from './BlockActions/ToggleEditBtn';
-import BlockActionBtn from './BlockActions/BlockActionBtn';
+import EditBtn from './BlockActionButtons/EditBtn';
+import DeleteBtn from './BlockActionButtons/DeleteBtn';
 import { isBlockContentEmpty } from '../../utils/validation';
 import style from './Text.module.scss';
 import { notificationMessages } from '../../data/notification.model';
@@ -53,8 +53,8 @@ function Text({
   return (
     <div onDoubleClick={() => setEditMode(true)}>
       <div className={style.actionIcon}>
-        <ToggleEditBtn editMode={editMode} clickHandler={handleClickEdit} />
-        <BlockActionBtn title="Delete block" clickHandler={handleDelete} />
+        <EditBtn editMode={editMode} clickHandler={handleClickEdit} />
+        <DeleteBtn title="Delete block" clickHandler={handleDelete} />
       </div>
       <div className={classNames('BlockContent', style.blockContent)}>
         {editMode ? (

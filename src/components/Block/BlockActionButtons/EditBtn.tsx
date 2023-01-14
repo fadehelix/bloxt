@@ -6,7 +6,7 @@ type Props = {
   clickHandler: Function;
 };
 
-function ToggleEditBtn({ editMode, clickHandler }: Props) {
+function EditBtn({ editMode, clickHandler }: Props) {
   const title = editMode ? 'Save' : 'Edit';
   const cssClass = editMode ? 'ButtonSave' : 'ButtonEdit';
   return (
@@ -16,9 +16,9 @@ function ToggleEditBtn({ editMode, clickHandler }: Props) {
       onClick={() => clickHandler()}
       className={cssClass}
     >
-      {editMode ? <SaveIcon /> : <EditIcon />}
+      {editMode ? <SaveIcon color='primary'/> : <EditIcon color='primary'/>}
     </IconButton>
   );
 }
 
-export default ToggleEditBtn;
+export default EditBtn;

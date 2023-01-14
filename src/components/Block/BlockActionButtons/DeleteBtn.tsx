@@ -6,12 +6,12 @@ type Props = {
   clickHandler: Function;
 };
 
-function BlockActionBtn({ title, clickHandler }: Props) {
+function DeleteBtn({ title, clickHandler }: Props) {
   return (
     <IconButton title={title} aria-label={title} onClick={() => clickHandler()}>
-      <DeleteForeverIcon />
+      <DeleteForeverIcon color='error'/>
     </IconButton>
   );
 }
 
-export default BlockActionBtn;
+export default DeleteBtn;
