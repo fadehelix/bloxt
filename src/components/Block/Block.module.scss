@@ -2,7 +2,7 @@ $bg-color: white;
 .root {
   box-sizing: border-box;
   background-color: $bg-color;
-  border: 1px solid $bg-color;
+  // border: 1px solid $bg-color;
   padding: 8px;
   position: relative;
 
@@ -21,6 +21,11 @@ $bg-color: white;
   top: 0;
   left: 0;
 }
+:global(.block--active) {
+  border: 1px solid #000;
+
+}
 :global(.block--active) .blockTitle {
   display: block;
 }
+

@@ -10,15 +10,21 @@ type DraggableBlockType = {
 function DraggableBlock({ block, index }: DraggableBlockType) {
   return (
     <Draggable draggableId={block.id} index={index}>
-      {(provided) => (
-        <div
+      {(provided, snapshot) => {
+        console.log('is dragging?', snapshot.isDragging)
+        const style = {
+          ...provided.draggableProps.style,
+          border: snapshot.isDragging ? '1px solid #000' : '1px solid #fff',
+        };
+        return (<div
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
+          style={style}
         >
           <Block data={block} />
-        </div>
-      )}
+        </div>)
+      }}
     </Draggable>
   );
 }
