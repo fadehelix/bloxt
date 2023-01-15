@@ -3,7 +3,7 @@ import { Before, Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 const isTextEditorVisible = () => cy.get('.quill').eq(0).should('be.visible');
 
 Before(() => {
-  cy.visit('http://localhost:3000');
+  cy.visit('/');
 });
 
 When('I click block Edit button', () => {
