@@ -13,7 +13,7 @@
     "classnames": "^2.3.1",
     "easy-peasy": "^5.0.3",
     "faker": "^6.6.6",
-    "html-react-parser": "^3.0.7",
+    "html-react-parser": "^5.0.11",
     "notistack": "^3.0.1",
     "react": "^17.0.2",
     "react-beautiful-dnd": "^13.1.0",
